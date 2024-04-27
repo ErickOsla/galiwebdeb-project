@@ -1,0 +1,25 @@
+.space {
+    margin-top: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+border-radius: 5px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+.btn-info {
+background-color: #17a2b8;
+border-color: #17a2b8;
+
+&:hover {
+    background-color: #117a8b;
+    border-color: #117a8b;
+}
+}
