@@ -24,9 +24,11 @@ function App() {
             </Row>
             <Row>
               <div className='scrolling'>
-                <Item></Item>
-                <Item></Item>
-                <Item></Item>
+                <Item/>
+
+                <Item/>
+                <Item/>
+              
               </div>
             </Row>
           </Col>
