@@ -1,25 +1,30 @@
 .space {
-    margin-top: 20px;
-}
-
-.form-label {
-    font-weight: bold;
-}
-
-.form-control {
-border-radius: 5px;
+margin-top: 20px;
+background-color: #e7f7f9;
 }
 
 .form-group {
-margin-bottom: 20px;
+margin-bottom: 20px; 
+}
+
+.form-label {
+font-weight: bold; 
+margin: 5px;
+padding: auto;
+}
+
+.form-control {
+border-color: #ced4da; 
 }
 
 .btn-info {
-background-color: #17a2b8;
-border-color: #17a2b8;
-
-&:hover {
-    background-color: #117a8b;
-    border-color: #117a8b;
+background-color: #17a2b8; 
+border-color: #17a2b8; 
+color: #fff; 
+font-weight: bold; 
 }
+
+.btn-info:hover {
+background-color: #138496; 
+border-color: #138496; 
 }

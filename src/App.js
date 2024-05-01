@@ -1,4 +1,3 @@
-
 import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Item from './Components/item/item'
@@ -8,8 +7,23 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import AddMobileButton from './Components/AddMobileButton/AddMobileButton'
+import { useSelector } from 'react-redux';
+
+const list = [
+  {
+    'name': 'Ganar Curso',
+    'descripcion': 'Ganar curso de desarrollo web',
+    'dueDate': '26-04-24'
+  },
+  {
+    'name': 'Ganar Curso',
+    'descripcion': 'Ganar curso de desarrollo web',
+    'dueDate': '26-04-24'
+  }
+]
 
 function App() {
+  const goals = useSelector((state)=>state.goals.value);
   return(
     <div className='App'>
       <Menu/>
@@ -24,11 +38,9 @@ function App() {
             </Row>
             <Row>
               <div className='scrolling'>
-                <Item/>
-
-                <Item/>
-                <Item/>
-              
+                {goals.map((task,index)=>(
+                  <Item key={index} name={task.name} descripcion={task.descripcion} dueDate={task.dueDate}/>
+                ))}
               </div>
             </Row>
           </Col>
