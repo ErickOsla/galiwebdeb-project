@@ -3,7 +3,7 @@
 
 ACTIVIDAD 1: main
 
-ACTIVIDAD 2: frontend-dev 
+ACTIVIDAD 2: segunda-fase
 
 ACTIVIDAD 3: backend-dev  
 
