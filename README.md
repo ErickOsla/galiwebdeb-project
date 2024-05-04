@@ -1,3 +1,14 @@
+## DISTRIBUCION DE LAS ACTIVIDADES SEGUN BRANCH
+
+
+ACTIVIDAD 1: main
+
+ACTIVIDAD 2: frontend-dev 
+
+ACTIVIDAD 3: backend-dev  
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
