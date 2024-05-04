@@ -6,6 +6,7 @@ import optionReducer from "./reducers/optionSlice";
 export default configureStore({
     reducer:{
         goals:goalReducer,
+        option:optionReducer,
         option:optionReducer
     }
 })

@@ -12,11 +12,13 @@ export const goalsSlice = createSlice({
         ]
     },
     reducers:{
-        addGoal: (state, acction) =>{
-            state.value.push(acction.payload);
+        addGoal: (state, action) =>{
+            state.value.push(action.payload);
         }
     }
 })
 
 export const {addGoal} = goalsSlice.actions;
+export const selectGoals = (state) => state.goals.value
+
 export default goalsSlice.reducer;
