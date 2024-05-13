@@ -5,6 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import './menu.scss'
 import { useSelector, useDispatch} from 'react-redux'
 import {changeOption} from '../../reducers/optionSlice'
+import FormTaskAndGoal from '../Form/form';
+
 
 function Menu() {
     const option = useSelector((state) => state.option.value);

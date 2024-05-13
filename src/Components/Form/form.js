@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button'
 import './form.scss'
 import { useDispatch } from 'react-redux'
 import {addGoal} from '../../reducers/goalsSlice';
+import { addTask } from '../../reducers/taskSlice';
 import { useRef } from 'react';
 
 
@@ -15,6 +16,8 @@ function FormTaskAndGoal(props){
     const dispatch = useDispatch();
     
     const addItem = (e) =>{
+        console.log("print de props type:")
+        console.log(props.type)
         e.preventDefault();
         const newItem = {
         name: inputRefName.current.value, 
@@ -26,6 +29,12 @@ function FormTaskAndGoal(props){
         } else if (props.type === 'tasks') {
             dispatch(addTask(newItem));
         }
+        inputRefName.current.value = '';
+        inputRefDescription.current.value = '';
+        inputRefDueDate.current.value = '';
+        };
+
+
 
 
     return(
@@ -36,14 +45,14 @@ function FormTaskAndGoal(props){
                 <Form.Control type='text' placeholder="" ref={inputRefName} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='exampleForm.ControlTextarea1'>
-                <Form.Label>Descripcion</Form.Label>
+                <Form.Label>Description</Form.Label>
                 <Form.Control as="textarea" rows={3} ref={inputRefDescription} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
                 <Form.Label>Due Date</Form.Label>
                 <Form.Control type='date' placeholder='name@example.com' ref={inputRefDueDate}/>
             </Form.Group>
-            <Button variant='info' onClick={addItem}>Add Goal</Button>
+            <Button variant='info' onClick={addItem}>ADD</Button>
             </Form>
         </div>
     )

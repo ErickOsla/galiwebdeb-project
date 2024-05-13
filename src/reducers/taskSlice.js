@@ -1,15 +1,15 @@
 import {createSlice} from '@reduxjs/toolkit'
 
-export const goalsSlice = createSlice({
-    name:'goals',
+export const taskSlice = createSlice({
+    name:'tasks',
     initialState: {
         value: []
     },
     reducers:{
-        addGoal: (state, action) =>{
-            console.log(action.payload)
+        addTask: (state, action) =>{
+            console.log(action.payload);
             state.value.push(action.payload);
-            fetch("http://localhost:3001/goals/addGoal",{
+            fetch("http://localhost:3001/tasks/addTask",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json",
@@ -20,28 +20,26 @@ export const goalsSlice = createSlice({
                 console.log(err);
             })
         },
-        initAddGoal: (state,action) =>{
+        initAddTask: (state, action) => {
             console.log(action.payload);
             state.value.push(action.payload)
         },
-        removeGoal: (state, action) => {
-            console.log("remove:")
-            console.log(action.payload)
-            state.value=state.value.filter((goal)=>goal.id!==action.payload);
-            fetch("http://localhost:3001/goals/removeGoal/"+action.payload,{
+        removeTask: (state, action) =>{
+            state.value= state.value.filter((task)=>task.id!==action.payload);
+            fetch("http://localhost:3001/tasks/removeTask/"+action.payload,{
                 method:"DELETE",
                 headers:{
                     "Content-Type":"application/json",
                     "Authorization":"123456"
-                }
+                },
             }).catch(err=>{
-                console.log(err)
+                console.log(err);
             })
-        }
+        },
     }
 })
 
-export const {addGoal, initAddGoal, removeGoal} = goalsSlice.actions;
-export const selectGoals = (state) => state.goals.value;
+export const {addTask, initAddTask, removeTask} = taskSlice.actions;
+export const selectTasks = (state) => state.tasks.value;
 
-export default goalsSlice.reducer;
+export default taskSlice.reducer;
