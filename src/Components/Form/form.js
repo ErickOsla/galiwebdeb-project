@@ -16,10 +16,16 @@ function FormTaskAndGoal(props){
     
     const addItem = (e) =>{
         e.preventDefault();
-        dispatch(addGoal({'name':inputRefName.current.value, 
-        'description':inputRefDescription.current.value, 
-        'dueDate':inputRefDueDate.current.value }));
-    }
+        const newItem = {
+        name: inputRefName.current.value, 
+        description: inputRefDescription.current.value, 
+        dueDate: inputRefDueDate.current.value 
+        };
+        if (props.type === 'goals') {
+            dispatch(addGoal(newItem));
+        } else if (props.type === 'tasks') {
+            dispatch(addTask(newItem));
+        }
 
 
     return(
