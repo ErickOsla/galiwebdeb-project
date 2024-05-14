@@ -7,8 +7,8 @@ ACTIVIDAD 2: segunda-fase
 
 ACTIVIDAD 3: backend-dev  
 
-## ACTIVIDAD 4 =>  branch: frontend-backend
-configuracion de requests(add and remove) y endpoinds en API con code status.
+## ACTIVIDAD 4 =>  branch: main (merged)
+configuracion de requests(add and remove) y endpoinds en API con code status. se hizo merge al main branch
 
 
 
