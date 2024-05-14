@@ -1,31 +1,27 @@
-// Import Bootstrap SCSS
-@import '~bootstrap/scss/bootstrap';
+// menu.scss
 
-// Custom styles
 .navbar {
-  background-color: #f8f9fa; // Background color for the navbar
-}
-
-.navbar-brand {
-  color: #000; // Color for the navbar brand
+  background-color: #343a40; // Dark background color
 }
 
 .nav-link {
-  color: #dc3545; // Color for regular nav links
+  color: #fff; // 
+  margin-right: 15px; 
+  font-size: 16px; 
+  transition: color 0.3s; 
+  
+  &:hover {
+    color: #007bff; 
+  }
 }
 
-.nav-link:hover {
-  color: #c82333; // Color for nav links on hover
+.navbar-brand {
+  color: #fff; 
+  font-weight: bold; 
+  font-size: 20px; 
 }
 
-.nav-dropdown-item {
-  color: #000; // Color for dropdown items
+.navbar-toggler-icon {
+  background-color: #343a40; 
 }
 
-.nav-dropdown-item:hover {
-  color: #333; // Color for dropdown items on hover
-}
-
-.color-rojo {
-  color: red; // Custom color class
-}
