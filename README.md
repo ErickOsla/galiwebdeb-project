@@ -16,7 +16,7 @@ ACTIVIDAD 5 => branch: backend-database-integration
 se configura CRUD a los end points de la API con una base de datos (mongodb)
 
 ## Actividad 6 => branch: main (merged)
-se prepara la aplicacion para se ejecutada desde un contenedor creando una imagen
+se prepara la aplicacion para se ejecutada desde un contenedor creando una imagen,
 RUN IN TERMINAL:
 >> docker build . -t todolist-app-image
 
