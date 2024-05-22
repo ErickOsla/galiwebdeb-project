@@ -11,12 +11,15 @@ ACTIVIDAD 4 =>  branch: main (merged)
 configuracion de requests(add and remove) y endpoinds en API con code status. se hizo merge al main branch
 
 
-=======
-## ACTIVIDAD 5 => branch: backend-database-integration
+
+ACTIVIDAD 5 => branch: backend-database-integration
 se configura CRUD a los end points de la API con una base de datos (mongodb)
 
-Actividad 6 => branch: main (merged)
-
+## Actividad 6 => branch: main (merged)
+se prepara la aplicacion para se ejecutada desde un contenedor creando una imagen
+ **RUN IN TERMINAL** :
+- >> docker build . -t tasks-goals-api
+->> docker run -p 3001:3001 tasks-goals-api
 
 # Getting Started with Create React App
 
