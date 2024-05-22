@@ -17,9 +17,10 @@ se configura CRUD a los end points de la API con una base de datos (mongodb)
 
 ## Actividad 6 => branch: main (merged)
 se prepara la aplicacion para se ejecutada desde un contenedor creando una imagen
- **RUN IN TERMINAL** :
-- >> docker build . -t tasks-goals-api
-->> docker run -p 3001:3001 tasks-goals-api
+RUN IN TERMINAL:
+>> docker build . -t tasks-goals-api
+
+>> docker run -p 3001:3001 tasks-goals-api
 
 # Getting Started with Create React App
 
